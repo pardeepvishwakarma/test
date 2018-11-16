@@ -1,0 +1,40 @@
+<style type="text/css">
+    #fullPageLoader{
+	    position: fixed;
+	    background: rgba(255,255,255,0.5);
+	    top: 0;
+	    bottom: 0;
+	    left: 0;
+	    right: 0;
+	    text-align: center;
+	    width: 100%;
+	    height: 100%;
+	    padding-top: 100px;
+    }
+</style>
+<div id="fullPageLoader" ng-show="fullPageLoader">
+	Loding..
+</div>
+<h2 class="my-5">{{names}}</h2>
+<div class="table-responsive">
+	<table class="table" ng-if="myWelcome.length > 0">
+	  <thead class="thead-light">
+	    <tr>
+	      <th scope="col">Picture</th>
+	      <th scope="col">Name</th>
+	      <th scope="col">Gender</th>
+	      <th scope="col">phone</th>
+	      <th scope="col">email</th>
+	    </tr>
+	  </thead>
+	  <tbody>
+		<tr ng-repeat="obj in myWelcome">
+			<td><img ng-src="{{obj.picture.thumbnail}}"></td>
+			<td>{{obj.name.title + ' ' + obj.name.first + ' ' + obj.name.last}}</td>
+			<td>{{obj.gender}}</td>
+			<td>{{obj.phone}}</td>
+			<td><a href="mailto:{{obj.email}}">{{obj.email}}</a></td>
+		</tr>
+	  </tbody>
+	</table>
+</div>

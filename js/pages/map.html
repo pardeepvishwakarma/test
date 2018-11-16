@@ -1,0 +1,44 @@
+<h2 class="my-5">{{names}}</h2>
+<style type="text/css">
+	.clicker {
+	    height: 300px;
+	    width: 300px;
+	    margin: 0 auto;
+	    overflow: hidden;
+	    position: relative;
+	}
+	.clicker-display {
+	    height: 200px;
+	}
+	.clicker-button-panel {
+	    height: 100px;
+	}
+	.btn {
+	    border-radius: 0 !important;
+	    cursor: pointer;
+	}
+	.alert-success{
+		position: absolute;
+	    top: 0;
+	    font-size: 35px;
+	    padding: 10px;
+	}
+	.alert-success small{
+		    font-size: 20px;
+	}
+</style>
+<!-- <img src="img/Regent Room.JPG" style="width: 100%;"> -->
+<div class="container">
+    <div class="clicker border border-secondary rounded">
+        <div class="clicker-display d-flex align-items-center bg-light text-secondary">
+            <div class="mx-auto display-1 {{showClass}}" ng-init="count = 0">{{count}} <small ng-if="showBig">X {{inc - 1}}</small></div>
+            <div class="mx-auto display-1" ng-init="count = 0" ng-if="showBig">{{multiple}}</div>
+        </div>
+        <div class="clicker-button-panel d-flex flex-row">
+        	<button class="btn btn-success w-100" ng-click="count = count - 1"><i class="fa fa-minus fa-2x">-</i></button>
+        	<button class="btn btn-warning w-100" ng-click="count = 0; reset()"><i class="fa fa-refresh fa-2x">refresh</i></button>
+        	<button class="btn btn-danger w-100" ng-click="count = count + 1"><i class="fa fa-plus fa-2x">+</i></button>
+        	<button class="btn btn-success w-100" ng-click="multiple = count * inc; functionss()"><i class="fa fa-plus fa-2x">{{inc}}X</i></button>
+        </div>
+    </div>
+</div>

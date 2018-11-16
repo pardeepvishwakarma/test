@@ -1,0 +1,11 @@
+<h2 class="my-5">{{names}}</h2>
+<form class="form-inline" ng-submit="todoAdd()">
+  <div class="form-group mx-sm-3 mb-2">
+    <label for="list_name" class="sr-only">List Name</label>
+    <input type="test" ng-model="todoInput" class="form-control" id="list_name" placeholder="List Name" required="">
+  </div>
+  <button type="submit" class="btn btn-primary mb-2">Submit</button>
+</form>
+<ul>
+	<li ng-repeat="x in todoList">{{x.todoText}}</li>
+</ul>

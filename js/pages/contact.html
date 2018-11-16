@@ -1,0 +1,21 @@
+<h2 class="my-5">{{names}}</h2>
+<form class="mb-5" ng-submit="submit()" novalidate="">
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email" required ng-model="dataForm.email">
+  </div>
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input type="text" class="form-control" id="name" placeholder="Enter Name" required ng-model="dataForm.name">
+  </div>
+  <div class="form-group">
+    <label for="phone">Phone</label>
+    <input type="text" class="form-control" id="phone" placeholder="Enter phone" required ng-model="dataForm.phone">
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+  <div class="row justify-content-center">
+      <div class="col-12">
+        <div class="form-group {{showErrorClass}} alert" ng-if="showError">Message</div>
+      </div>
+    </div>
+</form>

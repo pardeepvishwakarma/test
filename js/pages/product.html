@@ -1,0 +1,21 @@
+<h2 class="my-5">{{names}}</h2>
+<div class="table-responsive">
+	<table class="table" ng-if="productlist.length > 0">
+	  <thead class="thead-light">
+	    <tr>
+	      <th scope="col" width="185">Name</th>
+	      <th scope="col">Category</th>
+	      <th scope="col">Website</th>
+	      <th scope="col">Content</th>
+	    </tr>
+	  </thead>
+	  <tbody>
+		<tr ng-repeat="obj in productlist">
+			<td>{{obj.brand_name}}</td>
+			<td>{{obj.brand_category}}</td>
+			<td><a href="{{obj.brand_website}}">{{obj.brand_website}}</a></td>
+			<td>{{obj.brand_content}}</td>
+		</tr>
+	  </tbody>
+	</table>
+</div>
